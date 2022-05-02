@@ -1,5 +1,6 @@
 FROM httpd:2.4
 
+RUN apt update
 RUN apt-get install apache2.2-common
 
 COPY www/ /usr/local/apache2/htdocs/
