@@ -1,7 +1,7 @@
-FROM httpd:2.4
+FROM debian:stretch
 
 RUN apt update
-RUN apt install libapache2-mod-wsgi python-dev -y
+RUN apt install apache2 libapache2-mod-wsgi python-dev -y
 RUN a2enmod wsgi
 
 COPY www/ /usr/local/apache2/htdocs/
