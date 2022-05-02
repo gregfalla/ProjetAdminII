@@ -1,7 +1,8 @@
 FROM httpd:2.4
 
 RUN apt update
-RUN apt-get install apache2.2-common
+RUN apt-get install apache2 libapache2-mod-wsgi python-dev
+RUN a2enmod wsgi
 
 COPY www/ /usr/local/apache2/htdocs/
 COPY b2b /usr/local/apache2/htdocs/
