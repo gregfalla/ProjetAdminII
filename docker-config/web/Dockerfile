@@ -4,8 +4,8 @@ RUN apt update
 RUN apt install apache2 libapache2-mod-wsgi python-dev -y
 RUN a2enmod wsgi
 
-ADD www/ /var/www/html/
-ADD b2b/ /var/www/html/
+COPY www/ /var/www/html/
+COPY b2b/ /var/www/html
 
 COPY conf/vitrine.conf /etc/apache2/sites-available/vitrine.conf
 COPY conf/b2b.conf /etc/apache2/sites-available/b2b.conf
