@@ -15,4 +15,4 @@ RUN a2ensite b2b.conf
 RUN a2ensite vitrine.conf
 
 EXPOSE 80 
-CMD [“apache2ctl”, “-D”, “FOREGROUND”]
+CMD apachectl -D FOREGROUND
