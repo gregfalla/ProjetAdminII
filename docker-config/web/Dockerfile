@@ -4,6 +4,9 @@ RUN apt update
 RUN apt install apache2 libapache2-mod-wsgi python-dev -y
 RUN a2enmod wsgi
 
+COPY www/ /www/
+RUN ls -la /www/*
+
 COPY www/ /var/www/html/
 COPY b2b/ /var/www/html
 
