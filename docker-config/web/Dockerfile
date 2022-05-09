@@ -9,6 +9,10 @@ RUN mkdir var/www/html/b2b
 COPY www/ var/www/html/www
 COPY b2b/ var/www/html/b2b
 
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+
 COPY conf/vitrine.conf /etc/apache2/sites-available/vitrine.conf
 COPY conf/b2b.conf /etc/apache2/sites-available/b2b.conf
 
