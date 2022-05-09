@@ -7,8 +7,6 @@ RUN a2enmod wsgi
 COPY www/ /www/
 RUN ls -la /www/*
 
-COPY www/ /var/www/html/
-COPY b2b/ /var/www/html
 
 COPY conf/vitrine.conf /etc/apache2/sites-available/vitrine.conf
 COPY conf/b2b.conf /etc/apache2/sites-available/b2b.conf
