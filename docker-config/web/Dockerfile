@@ -19,7 +19,7 @@ COPY conf/b2b.conf /etc/apache2/sites-available/b2b.conf
 RUN a2dissite 000-default
 RUN a2ensite b2b.conf
 RUN a2ensite vitrine.conf
-
+ 
 EXPOSE 80 
 
 RUN mkdir /db
