@@ -1,7 +1,7 @@
 FROM debian:stretch
 
 RUN apt update
-RUN apt install apache2 libapache2-mod-wsgi python-dev php libapache2-mod-php sqlite3 libsqlite3-dev -y
+RUN apt install apache2 libapache2-mod-wsgi python-dev php libapache2-mod-php sqlite3 libsqlite3-dev php-sqlite3 -y
 RUN a2enmod wsgi
 
 RUN mkdir var/www/html/www
